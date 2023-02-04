@@ -1,0 +1,25 @@
+{
+  "name": "async-utils",
+  "version": "0.0.1",
+  "description": "A set of utils for working with async code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slowpoison-node/async-utils.git"
+  },
+  "keywords": [
+    "async",
+    "await",
+    "utility",
+    "utilities"
+  ],
+  "author": "Vishal Verma <vish@slowpoison.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slowpoison-node/async-utils/issues"
+  },
+  "homepage": "https://github.com/slowpoison-node/async-utils#readme"
+}
