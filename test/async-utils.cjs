@@ -9,14 +9,14 @@ describe('AsyncUtils.callbackToPromise', () => {
   it('should turn a callback into a promise', async function() {
     // set up a mock callback
     var callbackCalled = false;
-    var callbackArgs = null;
-    callback = (args) => {
+    var callbackArgs = [];
+    callback = (...args) => {
       callbackCalled = true;
       callbackArgs = args;
     }
 
     method = (callback) => {
-      setTimeout(() => callback(1, 2, 3), 1);
+      setTimeout(() => callback(1, 2, 3), 0);
     }
 
     await AsyncUtils.callbackToPromise(method, callback);
