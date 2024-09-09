@@ -11,6 +11,11 @@ function *gen() {
 }
 
 describe('Generator Utils', function() {
+  it('should return first matching value', function() {
+    let iter = gen();
+    assert.equal(GeneratorUtils.first(iter, item => item === 3), 3);
+  });
+
   it('should filter an iterator', function() {
     let iter = GeneratorUtils.filter(gen(), item => item % 2 === 0);
     assert.equal(iter.next().value, 2);
