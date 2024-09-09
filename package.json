@@ -1,8 +1,8 @@
 {
   "name": "@slowpoison/async-utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A set of utils for working with async code",
-  "main": "async-utils.cjs",
+  "main": "index.cjs",
   "access": "public",
   "scripts": {
     "test": "mocha"
@@ -15,7 +15,10 @@
     "async",
     "await",
     "utility",
-    "utilities"
+    "utilities",
+    "generator",
+    "iterator",
+    "functional"
   ],
   "author": "Vishal Verma <vish@slowpoison.net>",
   "license": "MIT",
@@ -24,7 +27,7 @@
   },
   "homepage": "https://github.com/slowpoison-node/async-utils#readme",
   "devDependencies": {
-    "mocha": "^10.2",
+    "mocha": "^10.7",
     "chai": "^4.3"
   }
 }
