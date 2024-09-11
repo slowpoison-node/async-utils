@@ -1,12 +1,12 @@
 {
   "name": "@slowpoison/async-utils",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A set of utils for working with async code",
   "main": "index.cjs",
   "access": "public",
   "types": "index.d.ts",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha && tsc --noEmit"
   },
   "repository": {
     "type": "git",
