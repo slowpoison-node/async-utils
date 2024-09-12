@@ -9,16 +9,33 @@ function first(iter, predicate) {
   return null
 }
 
-function *filter(iter, predicate) {
-  for (let item of iter) {
-    if (predicate(item)) {
-      yield item;
+async function *filter(iter, predicate) {
+  if (typeof iter[Symbol.asyncIterator] == 'function') {
+    for await (let item of iter) {
+      if (predicate(item)) {
+        yield item;
+      }
+    }
+    /*
+    let l = await iter.next();
+    while (l.done !== true) {
+      if (predicate(l.value)) {
+        yield l.value;
+      }
+      l = await iter.next();
+    }
+      */
+  } else {
+    for (let item of iter) {
+      if (predicate(item)) {
+        yield item;
+      }
     }
   }
 }
 
-function *map(iter, fn) {
-  for (let item of iter) {
+function *map(gen, fn) {
+  for (let item of gen) {
     yield fn(item);
   }
 }

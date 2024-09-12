@@ -1,6 +1,6 @@
 {
   "name": "@slowpoison/async-utils",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A set of utils for working with async code",
   "main": "index.cjs",
   "access": "public",
@@ -28,7 +28,10 @@
   },
   "homepage": "https://github.com/slowpoison-node/async-utils#readme",
   "devDependencies": {
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^22.5.4",
+    "chai": "^4.3",
     "mocha": "^10.7",
-    "chai": "^4.3"
+    "typescript": "^5.6.2"
   }
 }
