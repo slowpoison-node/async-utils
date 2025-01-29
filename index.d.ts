@@ -11,4 +11,10 @@ declare module '@slowpoison/async-utils' {
     export function filter<T, TRet, TNext>(g: AnyIterator<T, TRet, TNext>, predicate: (value: T) => boolean): AsyncGenerator<T, TRet, TNext>
     export function map<T>(iterable: Iterable<T>, mapper: (value: T) => any): Generator<T>
   }
+
+  export class RewindableIterator<T> implements Iterator<T> {
+    constructor(iterable: Iterable<T>)
+    next(...[value]: [] | [TNext]): IteratorResult<T, TReturn>;
+    rewind(): void
+  }
 }
